@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .form-container {
+    width: 90%;
+    max-width: 400px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  label {
+    margin-right: 10px;
+    text-align: right;
+    white-space: nowrap;
+    width: 40%;
+  }
+  input, textarea, button {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #444;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  input, textarea {
+    margin-right: auto;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  input[type="date"] {
+    text-align: center;
+  }
+  button {
+    background-color: rgb(163, 0, 0);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 30px 0 0 170px;
+    display: block;
+  }
+  button:hover {
+    background-color: rgb(210, 0, 0);
+  }

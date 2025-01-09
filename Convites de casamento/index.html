@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Convite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <form id="inviteForm">
+      <div class="form-group">
+        <label for="titulo">Título do convite:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ex: Festa de Aniversário" required>
+      </div>
+      <div class="form-group">
+        <label for="frase">Frase:</label>
+        <textarea id="frase" name="frase" placeholder="Ex: Venha comemorar comigo!" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="convidados">Convidados:</label>
+        <textarea id="convidados" name="convidados" placeholder="Ex: João, Maria, Ana" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <div class="form-group">
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua das Flores, 123" required>
+      </div>
+      <div>
+        <button type="button" id="generateButton">GERAR CONVITES</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
