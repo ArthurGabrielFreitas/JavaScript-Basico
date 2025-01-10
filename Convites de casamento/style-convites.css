@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  #invitation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .invitation-card {
+    border: 5px solid red;
+    background-color: white;
+    padding: 20px;
+    display: flex; /* Layout flex para organizar lado a lado */
+    align-items: center; /* Alinha imagem e texto verticalmente */
+    gap: 20px; /* Espaço entre texto e imagem */
+    width: 100%;
+    max-width: 600px;
+    margin: 5px auto; /* Centraliza horizontalmente e dá espaçamento vertical */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Para criar efeito de deslizamento */
+    transition: all 0.5s ease; /* Suaviza a transição */
+  }
+  
+  .invitation-card.visible {
+    opacity: 1; /* Torna o card visível */
+    transform: translateY(0); /* Reseta o deslizamento */
+  }
+  
+  .invitation-card img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .invitation-card .text-content {
+    width: 60%;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .invitation-card h1 {
+    color: red;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .invitation-card p {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  
+  .invitation-card .address {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 15px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 8px auto 0;
+  }
