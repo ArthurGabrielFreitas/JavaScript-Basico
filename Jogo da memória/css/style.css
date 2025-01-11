@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  header h1 {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  .instructions, .difficulty {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .instructions h2, .difficulty h2 {
+    color: #0073e6;
+    text-align: center;
+  }
+  
+  .instructions p, .instructions ul {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .difficulty .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-easy {
+    background-color: #4caf50; /* Verde */
+    color: white;
+  }
+  
+  .btn-medium {
+    background-color: #ff9800; /* Laranja */
+    color: white;
+  }
+  
+  .btn-hard {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
