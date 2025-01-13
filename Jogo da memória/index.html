@@ -8,21 +8,21 @@
 </head>
 <body>
   <header>
-    <h1>Memória de Energia</h1>
+    <h1><a href="index.html">Memória de Energia</a></h1>
   </header>
   <main>
     <section class="instructions">
         <h2>Como Jogar</h2>
         <p>
           Combine pares de cartas no menor número de tentativas possível.
-          O jogador com a melhor pontuação será aquele que errar menos (ou seja, realizar menos tentativas). 
+          O jogador com a melhor pontuação será aquele que errar menos. 
           Um par de cartas viradas conta como uma tentativa.
         </p>
         <p>
           Além disso:
           <ul>
             <li>O cronômetro e o número de tentativas são exibidos durante o jogo.</li>
-            <li>Os dados são salvos e exibidos ao iniciar um novo jogo.</li>
+            <li>Os dados são salvos e exibidos nesta tela ao completar um jogo.</li>
             <li>O jogo pode ser reiniciado a qualquer momento, embaralhando as cartas novamente.</li>
           </ul>
         </p>
@@ -41,19 +41,19 @@
         </thead>
         <tbody>
           <tr>
-            <td><button id="easy" class="btn btn-easy" onclick="startGame('facil')">Fácil</button></td>
+            <td><button id="easy" class="btn btn-easy" onclick="startGame('easy')">Fácil</button></td>
             <td id="easy-time">--:--</td>
             <td id="easy-attempts">--</td>
             <td id="easy-player">--</td>
           </tr>
           <tr>
-            <td><button id="medium" class="btn btn-medium" onclick="startGame('medio')">Médio</button></td>
+            <td><button id="medium" class="btn btn-medium" onclick="startGame('medium')">Médio</button></td>
             <td id="medium-time">--:--</td>
             <td id="medium-attempts">--</td>
             <td id="medium-player">--</td>
           </tr>
           <tr>
-            <td><button id="hard" class="btn btn-hard" onclick="startGame('dificil')">Difícil</button></td>
+            <td><button id="hard" class="btn btn-hard" onclick="startGame('hard')">Difícil</button></td>
             <td id="hard-time">--:--</td>
             <td id="hard-attempts">--</td>
             <td id="hard-player">--</td>

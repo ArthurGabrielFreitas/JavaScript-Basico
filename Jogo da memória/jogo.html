@@ -8,16 +8,20 @@
 </head>
 <body>
   <header>
-    <h1>Memória de Energia</h1>
+    <h1><a href="index.html">Memória de Energia</a></h1>
     <div class="info">
       <p>Dificuldade: <span id="difficulty"></span></p>
       <p>Tempo: <span id="timer">00:00</span></p>
       <p>Movimentos: <span id="moves">0</span></p>
+      <button id="reset-button">Reiniciar</button>
     </div>
   </header>
   <main>
     <div id="game-board" class="game-board">
-      <!-- As cartas serão geradas aqui dinamicamente -->
+      <audio id="card-flip-sound" src="./sounds/card-flip-sound.mp3" preload="auto"></audio>
+      <audio id="correct-answer-sound" src="./sounds/correct-answer-sound.mp3" preload="auto"></audio>
+      <audio id="wrong-answer-sound" src="./sounds/wrong-answer-sound.mp3" preload="auto"></audio>
+      <audio id="victory-fanfare-sound" src="./sounds/victory-fanfare-sound.mp3" preload="auto"></audio>
     </div>
   </main>
   <script src="js/jogo.js"></script>

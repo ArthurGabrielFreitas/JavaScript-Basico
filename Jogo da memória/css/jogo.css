@@ -1,66 +1,108 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #0073e6;
-    color: white;
-    padding: 15px;
-  }
-  
-  .info {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  
-  .game-board {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    justify-items: center;
-    margin: 0 auto;
-    background: white;
-    width: 85%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  /* Ajustes do grid */
-  .game-board.facil {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .game-board.medio {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  
-  .game-board.dificil {
-    grid-template-columns: repeat(9, 1fr);
-  }
-  
-  /* Estilo das cartas */
-  .card {
-    width: 120px;
-    height: 160px;
-    background-color: #ccc;
-    background-image: url('../img/pokemon-back-card.webp'); /* Parte de trás da carta */
-    background-size: cover;
-    border: 1px solid #0073e6;
-    border-radius: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #0073e6;
+  color: white;
+  padding: 5px;
+}
+
+header h1 {
+  background-color: #0073e6;
+  color: white;
+  padding: 5px 0;
+  margin: 0;
+}
+
+header h1 a {
+  text-decoration: none; /* Remover sublinhado */
+  color: white; /* Garantir que a cor do texto seja branca */
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+#reset-button {
+  color: white;
+  background-color: #4caf50;
+  padding: 8px 12px;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+  opacity: 0.8;
+}
+
+.game-board {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  background: white;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Ajustes do grid */
+.game-board.easy {
+  grid-template-columns: repeat(3, 1fr);
+  width: 45%;
+}
+
+.game-board.medium {
+  grid-template-columns: repeat(5, 1fr);
+  width: 65%;
+}
+
+.game-board.hard {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+/* Estilo das cartas */
+.card {
+  width: 90px;
+  height: 123px;
+  background-color: #ccc;
+  background-size: cover;
+  border: 1px solid #0073e6;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.disabled-card {
+  width: 90px;
+  height: 123px;
+  background-color: #ccc;
+  background-size: cover;
+  border: 1px solid #0073e6;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.7);
+}
