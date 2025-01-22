@@ -1,31 +1,35 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+})
+
 let dataInicio = new Date().getTime();
 
 const cartasUrl = [
-  "./img/aurora energy.png",
-  "./img/counter energy.png",
-  "./img/darkness energy.png",
-  "./img/double aqua energy.png",
-  "./img/double magma energy.png",
-  "./img/draw energy.png",
-  "./img/enriching energy.png",
-  "./img/fairy energy.png",
-  "./img/fighting energy.png",
-  "./img/fire energy.png",
-  "./img/grass energy.png",
-  "./img/lightning energy.png",
-  "./img/metal energy.png",
-  "./img/plasma energy.png",
-  "./img/psychic energy.png",
-  "./img/super boost energy.png",
-  "./img/water energy.png",
-  "./img/weakness guard energy.png",
+  "./img/aurora_energy.png",
+  "./img/counter_energy.png",
+  "./img/darkness_energy.png",
+  "./img/double_aqua_energy.png",
+  "./img/double_magma_energy.png",
+  "./img/draw_energy.png",
+  "./img/enriching_energy.png",
+  "./img/fairy_energy.png",
+  "./img/fighting_energy.png",
+  "./img/fire_energy.png",
+  "./img/grass_energy.png",
+  "./img/lightning_energy.png",
+  "./img/metal_energy.png",
+  "./img/plasma_energy.png",
+  "./img/psychic_energy.png",
+  "./img/super_boost_energy.png",
+  "./img/water_energy.png",
+  "./img/weakness_guard_energy.png",
 ];
 
 let firstCard = null;
 let lockBoard = false;
 let movimentos = 0;
 let acertos = 0;
-let timerInterval;
+let timerInterval = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Obter a dificuldade da query string
@@ -115,6 +119,10 @@ function handleCardClick(event) {
   } else {
     lockBoard = true;
 
+    movimentos++;
+    const movimentosElement = document.getElementById("moves");
+    movimentosElement.textContent = movimentos;
+
     if (
       firstCard.dataset.cardForeground === clickedCard.dataset.cardForeground
     ) {
@@ -147,10 +155,6 @@ function handleCardClick(event) {
         resetBoard();
       }, 1500);
     }
-
-    movimentos++;
-    const movimentosElement = document.getElementById("moves");
-    movimentosElement.textContent = movimentos;
   }
 }
 
@@ -171,7 +175,7 @@ function gameOver() {
   const minutes = String(Math.floor(gameTime / 60)).padStart(2, "0");
   const seconds = String(gameTime % 60).padStart(2, "0");
 
-  playSound("victory-fanfare-sound", 400).then(() => {
+  playSound("victory-fanfare-sound").then(() => {
     const playerName = prompt(
       `Parabéns! Você completou o jogo em ${movimentos} movimentos e ${minutes}:${seconds}. Digite seu nome para entrar na leaderboard:`
     );
@@ -202,7 +206,7 @@ function startTimer() {
 
 function saveBestScore(difficulty, time, moves, playerName) {
   const bestScores = JSON.parse(localStorage.getItem("bestScores")) || {};
-  if (!bestScores[difficulty] || moves < bestScores[difficulty].moves) {
+  if (!bestScores[difficulty.textContent] || moves < bestScores[difficulty.textContent].moves) {
     bestScores[difficulty.textContent] = { time, moves, playerName };
     localStorage.setItem("bestScores", JSON.stringify(bestScores));
   }
